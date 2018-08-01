@@ -66,6 +66,8 @@ void triangulos(){
 		int gamma1=(int)gamma;
 			if(alfa1==90||beta1==90||gamma1==90){
 				cout <<"Es un Triangulo Rectangulo!!!"<<endl;
+			}else{
+				cout <<"No es un Triangulo Rectangulo..."<<endl;
 			}
 		cout <<"Alfa: "<< alfa <<endl;
 		cout <<"Beta: "<< beta <<endl;
@@ -79,8 +81,26 @@ void triangulos(){
 	
 }
 void divisores(){
-
-
+	int num,suma=0,primo,cont;
+	do{
+		cout <<"Ingrese un Numero [1-N]: "<<endl;
+		cin >> num;
+	}while(num<1);
+	for(int i=1;i<=num;i++){
+		if(num % i==0){
+			cont=0;
+			primo=(num+i)/i;
+			for(int j=1;j<=primo;j++){	
+				if(primo % j==0){
+					cont++;
+				}
+			}
+			if(cont==2){
+				suma+=primo;
+			}
+		}
+	}
+	cout<<"El valor de K es: "<<suma<<endl;
 
 
 
