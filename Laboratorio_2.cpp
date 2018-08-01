@@ -20,27 +20,22 @@ void numerosImpares(){
 	cout <<"Ingrese un Numero [1-N]: "<<endl;
 	cin >> num;
 	}while(num<1);
-	bool encontrados=false;
-	int array[num];
-	for(int i=1;i<num;i++){
-		num_saltos+=i;
-	}
-	int encontrado=0;
-	while(encontrados==false){
-		if(cont % 2 !=0){		
-			if(impar>num_saltos){
-				array[encontrado]=cont;
-				encontrado++;
-			}
-			if(encontrado==num){
-				encontrados=true;	
-			}
-			impar++;
+	for(int i=1;i<=num;i++){
+		cout <<i<<"^3 =";
+		int suma=0;
+		for(int j=1;j<=i;j++){
+			if(j==i){
+				cout <<impar;
+			}else if(j<i){
+				cout <<impar<<"+";
+			}	
+			suma+=impar;
+			impar=impar + 2;
 		}
-		cont++;	
+		cout <<" ="<<suma<<endl;
 	}
-	cout <<num<<"^3 =";
-	int suma=0;
+
+/*
 	for(int i =0;i<num;i++){
 		if(i<num-1){
        		cout<< array[i]<<" + ";
@@ -51,7 +46,7 @@ void numerosImpares(){
 	}
 	cout <<suma<<endl;
 	
-    
+    */
 }
 void triangulos(){
 	double alfa,beta,gamma,lado1,lado2,lado3,op_g,op_a,op_b,area,s,resultado;
@@ -84,10 +79,10 @@ void triangulos(){
 		cout <<"Gamma: "<< gamma <<endl;
 		bool noventa=true;
 		double nov=90;
-		cout << (alfa == nov) <<"Ques es?" << noventa<<endl;
+	//	cout << (alfa == nov) <<"Ques es?" << noventa<<endl;
 		if(alfa==90.00||beta==90.00||gamma==90.00){
 			noventa=true;
-			co
+		
 		}
 		s=(lado1+lado2+lado3)/2;
 		area=s*(s-lado1)*(s-lado2)*(s-lado3);
