@@ -34,19 +34,6 @@ void numerosImpares(){
 		}
 		cout <<" ="<<suma<<endl;
 	}
-
-/*
-	for(int i =0;i<num;i++){
-		if(i<num-1){
-       		cout<< array[i]<<" + ";
-		}else if(i<num){
-		cout<< array[i]<<" =";
-		}
-		suma+=array[i];
-	}
-	cout <<suma<<endl;
-	
-    */
 }
 void triangulos(){
 	double alfa,beta,gamma,lado1,lado2,lado3,op_g,op_a,op_b,area,s,resultado;
@@ -74,16 +61,15 @@ void triangulos(){
 		alfa=(acos(op_a))*180/PI;
 		beta=(acos(op_b))*180/PI;
 		gamma=(acos(op_g))*180/PI;
+		int alfa1=(int)alfa;
+		int beta1=(int)beta;
+		int gamma1=(int)gamma;
+			if(alfa1==90||beta1==90||gamma1==90){
+				cout <<"Es un Triangulo Rectangulo!!!"<<endl;
+			}
 		cout <<"Alfa: "<< alfa <<endl;
 		cout <<"Beta: "<< beta <<endl;
 		cout <<"Gamma: "<< gamma <<endl;
-		bool noventa=true;
-		double nov=90;
-	//	cout << (alfa == nov) <<"Ques es?" << noventa<<endl;
-		if(alfa==90.00||beta==90.00||gamma==90.00){
-			noventa=true;
-		
-		}
 		s=(lado1+lado2+lado3)/2;
 		area=s*(s-lado1)*(s-lado2)*(s-lado3);
 		resultado=sqrt(area);
@@ -92,14 +78,23 @@ void triangulos(){
 
 	
 }
+void divisores(){
+
+
+
+
+
+}
+
 
 int main(){
 	int resp=0;
 	do{
+		cout <<endl;
 		cout <<"		MENU PRINCIPAL"<<endl
-		     <<"1. Ejercicio 1"<<endl
-		     <<"2. Ejercicio 2"<<endl
-		     <<"3. Ejercicio 3"<<endl
+		     <<"1. Raiz Cubica de Impares"<<endl
+		     <<"2. Areas y Angulos"<<endl
+		     <<"3. Divisores"<<endl
 		     <<"4. Salir"<<endl
 		     <<"Escoja su respuesta: "<<endl;
 		cin>> resp;
@@ -111,7 +106,7 @@ int main(){
 				triangulos();
 				break;
 			case 3: 
-
+				divisores();
 				break;
 		}
 		if(resp<1||resp>4){
